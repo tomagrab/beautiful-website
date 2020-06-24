@@ -21,16 +21,45 @@ body {
   font-size: 1.5rem;
 }
 
-.container-fluid {
-  padding: 2rem 0;
-}
+section {
+  padding: 2rem 3rem;
+} 
 
-@include slide-vertical-with-fade(slide-up, 100px, 0px, 0, 1);
+@include slide-vertical-with-fade(slide-up, 75px, 0px, 0, 1);
 
 .header {
-  animation: slide-up 1s ease;
+  margin-top: 1rem;
+  animation: slide-up 1.25s ease-in;
   display: inline-block;
   padding: 3px 5px;
+  background-color: colors(wine-dark);
   border: 3px solid colors(wine-dark);
   border-radius: 5px;
+}
+
+@include slide-horizontal-with-fade(slide-in-left, -50px, 0px, 0, 1);
+@include slide-horizontal-with-fade(slide-in-right, 50px, 0px, 0, 1);
+
+.wine-container {
+  display: grid;
+  grid-template-columns: repeat();
+}
+
+.wine-box {
+  background-color: colors(wine-dark);
+  padding: 1rem;
+  border-radius: 5px;
+  width: 350px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.wine-box-left {
+  animation: slide-in-left 1s ease-in;
+
+}
+
+.wine-box-right {
+  animation: slide-in-right 1s ease-in;
+  
 }
