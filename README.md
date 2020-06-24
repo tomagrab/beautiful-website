@@ -21,11 +21,11 @@ I plan on using for this project:
 - HTML5
 - SCSS
 - Vanilla JS
-- jQuery
 
 **Frameworks**
 
 - Bootstrap 4
+- jQuery
 
 **Misc**
 
