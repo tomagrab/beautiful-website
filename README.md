@@ -35,3 +35,35 @@ I plan on using for this project:
 
 - NodeJS
 - NPM
+
+## Updates
+
+### 06/24/2020 -
+
+For some inspiration on colors to use,
+I visited this website: https://visme.co/blog/website-color-schemes/ and chose to go with the
+"#10 Contemporary and Bold" theme.
+
+**I will be referring to the "Hello, world!"
+box as "title" in the following section -
+not to be confused with "Title" in the
+navbar.**
+
+I got the idea to use some CSS animations
+on the homepage where the page title slides
+up into place as it fades in. My initial
+thoughts were to use vanilla JavaScript,
+but I quickly found that I am not skilled enough
+in JS to do so. My knee-jerk reaction then
+was to use jQuery, but I want to strictly
+avoid using jQuery in order to challenge myself.
+
+The CSS animations as they stand do not
+satisfy what I am trying to accomplish -
+I want the title to slide up, then have the
+two boxes below it slide/fade into place
+after the title reaches its destination.
+
+I could easily do this using jQuery,
+but this project is not meant to be an easy
+one - in fact, it is meant to be the exact opposite.

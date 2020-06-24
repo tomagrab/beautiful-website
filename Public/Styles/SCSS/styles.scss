@@ -23,43 +23,59 @@ body {
 
 section {
   padding: 2rem 3rem;
-} 
+}
 
 @include slide-vertical-with-fade(slide-up, 75px, 0px, 0, 1);
-
-.header {
-  margin-top: 1rem;
-  animation: slide-up 1.25s ease-in;
-  display: inline-block;
-  padding: 3px 5px;
-  background-color: colors(wine-dark);
-  border: 3px solid colors(wine-dark);
-  border-radius: 5px;
-}
 
 @include slide-horizontal-with-fade(slide-in-left, -50px, 0px, 0, 1);
 @include slide-horizontal-with-fade(slide-in-right, 50px, 0px, 0, 1);
 
 .wine-container {
   display: grid;
-  grid-template-columns: repeat();
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+
+.header-container {
+  grid-column: span 2;
+  display: inline;
+}
+
+.header {
+  animation: slide-up 1s ease-in;
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: colors(wine-light);
+  border: 3px solid colors(wine-light);
+  border-radius: 5px;
+  justify-self: baseline;
 }
 
 .wine-box {
-  background-color: colors(wine-dark);
+  background-color: colors(wine-light);
   padding: 1rem;
   border-radius: 5px;
   width: 350px;
   display: inline-block;
   vertical-align: top;
+  grid-column: span 1;
 }
 
 .wine-box-left {
   animation: slide-in-left 1s ease-in;
-
+  justify-self: right;
 }
 
 .wine-box-right {
   animation: slide-in-right 1s ease-in;
-  
+  justify-self: left;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: colors(wine-dark);
+  padding: 0.5rem 0;
 }
