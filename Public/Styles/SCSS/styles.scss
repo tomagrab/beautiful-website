@@ -26,9 +26,8 @@ section {
 }
 
 @include slide-vertical-with-fade(slide-up, 75px, 0px, 0, 1);
-
-@include slide-horizontal-with-fade(slide-in-left, -50px, 0px, 0, 1);
-@include slide-horizontal-with-fade(slide-in-right, 50px, 0px, 0, 1);
+@include slide-horizontal(slide-in-left, -50px, 0px);
+@include slide-horizontal(slide-in-right, 50px, 0px);
 
 .wine-container {
   display: grid;
@@ -63,13 +62,18 @@ section {
 }
 
 .wine-box-left {
-  animation: slide-in-left 1s ease-in;
   justify-self: right;
+  opacity: 0;
+  // animation: slide-in-left 1s ease-in;
+  // transform: translateX(-90px)
 }
 
 .wine-box-right {
-  animation: slide-in-right 1s ease-in;
+  
   justify-self: left;
+  opacity: 0;
+  // animation: slide-in-right 1s ease-in;
+  // transform: translateX(90px)
 }
 
 .footer {

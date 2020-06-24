@@ -48,12 +48,10 @@ section {
   0% {
     -webkit-transform: translateX(-50px);
             transform: translateX(-50px);
-    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
-    opacity: 1;
   }
 }
 
@@ -61,12 +59,10 @@ section {
   0% {
     -webkit-transform: translateX(-50px);
             transform: translateX(-50px);
-    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
-    opacity: 1;
   }
 }
 
@@ -74,12 +70,10 @@ section {
   0% {
     -webkit-transform: translateX(50px);
             transform: translateX(50px);
-    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
-    opacity: 1;
   }
 }
 
@@ -87,12 +81,10 @@ section {
   0% {
     -webkit-transform: translateX(50px);
             transform: translateX(50px);
-    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
-    opacity: 1;
   }
 }
 
@@ -132,17 +124,15 @@ section {
 }
 
 .wine-box-left {
-  -webkit-animation: slide-in-left 1s ease-in;
-          animation: slide-in-left 1s ease-in;
   -ms-grid-column-align: right;
       justify-self: right;
+  opacity: 0;
 }
 
 .wine-box-right {
-  -webkit-animation: slide-in-right 1s ease-in;
-          animation: slide-in-right 1s ease-in;
   -ms-grid-column-align: left;
       justify-self: left;
+  opacity: 0;
 }
 
 .footer {

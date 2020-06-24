@@ -11,15 +11,13 @@
   }
 }
 
-@mixin slide-horizontal-with-fade($name, $x-1, $x-2, $opacity-1, $opacity-2) {
+@mixin slide-horizontal($name, $x-1, $x-3) {
   @keyframes #{$name} {
     0% {
       transform: translateX($x-1);
-      opacity: $opacity-1;
     }
     100% {
-      transform: translateX($x-2);
-      opacity: $opacity-2;
+      transform: translateX($x-3);
     }
   }
 }
