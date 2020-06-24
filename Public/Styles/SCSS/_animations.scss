@@ -1,0 +1,12 @@
+@mixin slide-vertical-with-fade($name, $y-1, $y-2, $opacity-1, $opacity-2) {
+  @keyframes #{$name} {
+    0% {
+      transform: translateY($y-1);
+      opacity: $opacity-1;
+    }
+    100% {
+      transform: translateY($y-2);
+      opacity: $opacity-2;
+    }
+  }
+}
