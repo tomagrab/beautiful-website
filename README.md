@@ -70,3 +70,15 @@ one - in fact, it is meant to be the exact opposite.
 
 **Later that day...**
 Decided I need to learn ReactJS
+
+### 06/27/2020
+
+I decided to remove the horizontal slide animation
+on my Left and Right boxes. I made a number of changes
+hoping I could find something I was happy with, such as
+changing how far the boxes slid in from, but in the end
+I chose to take away the animation altogether and simply have
+them fade in. I think it looks better that way. 
+
+The animations were flashy, but ultimately distracting
+in the grand scheme of things. 
