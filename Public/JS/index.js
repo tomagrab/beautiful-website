@@ -9,25 +9,6 @@ setTimeout(function slideBoxesIn() {
   var opacityR = Number(
     window.getComputedStyle(wineBoxR).getPropertyValue("opacity")
   );
-  var rectL = wineBoxL.getBoundingClientRect();
-  var rectR = wineBoxR.getBoundingClientRect();
-  rectL.left = 0;
-  rectR.right = 0;
-
-  var SI = setInterval(slideIn, 50);
-  var pos = 0;
-  wineBoxL.style.transform = "translateX(" + pos + "px)";
-  wineBoxR.style.transform = "translateX(" + -pos + "px)";
-  function slideIn() {
-    if (pos == 10) {
-      clearInterval(SI);
-    } else {
-      pos += 1;
-      console.log(rectL.right, rectR.left);
-      wineBoxL.style.transform = "translateX(" + pos + "px)";
-      wineBoxR.style.transform = "translateX(" + -pos + "px)";
-    }
-  }
 
   var CO = setInterval(changeOpacity, 10);
   function changeOpacity() {
@@ -36,6 +17,21 @@ setTimeout(function slideBoxesIn() {
     } else {
       wineBoxR.style.opacity = opacityR += 0.025;
       wineBoxL.style.opacity = opacityL += 0.025;
+    }
+  }
+}, 1000);
+
+setTimeout(function fadeImg() {
+  var img = document.querySelector(".seeing-eye");
+  var imgOpacity = Number(
+    window.getComputedStyle(img).getPropertyValue("opacity")
+  );
+  var CO = setInterval(changeOpacity, 20);
+  function changeOpacity() {
+    if (imgOpacity >= 1) {
+      clearInterval(CO);
+    } else {
+      img.style.opacity = imgOpacity += 0.025;
     }
   }
 }, 1000);
