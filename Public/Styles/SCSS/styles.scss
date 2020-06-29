@@ -13,6 +13,7 @@ body {
   color: colors(main-text);
   text-align: center;
   padding-bottom: 50px;
+  transition: margin-left 0.5s;
 }
 
 .navbar {
@@ -22,6 +23,42 @@ body {
 .navbar-brand {
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: colors(wine);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  margin-left: 50px;
+  font-size: 36px;
+}
+
+.openbtn {
+  background-color: colors(wine);
+  color: colors(main-text);
+  border: 1px solid;
+  transition: opacity 0.125s;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 section {
@@ -89,6 +126,10 @@ section {
   width: 100%;
   border: 3px solid colors(gray);
   border-radius: 5px;
+  opacity: 0;
+}
+
+.seeing-eye-caption {
   opacity: 0;
 }
 

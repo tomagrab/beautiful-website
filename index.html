@@ -31,57 +31,66 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
-    <nav class="navbar">
-      <a class="navbar-brand mx-auto">Title</a>
-    </nav>
 
-    <section>
-      <div class="container-fluid">
-        <div class="wine-container">
-          <div class="header-container">
-            <h1 class="header">Hello, world!</h1>
-          </div>
-          <div class="wine-box wine-box-left">
-            <h1>Left</h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sequi
-            fugiat, facere cupiditate fugit ad? Ea, laborum, doloremque sed
-            accusantium odio eum perferendis soluta debitis quos aperiam, fugit
-            dicta a! Quae est accusamus hic reprehenderit excepturi qui. Quasi
-            praesentium officia accusantium fuga, nisi laboriosam facere
-            nesciunt eligendi quas, tenetur corporis.
-          </div>
-          <div class="wine-box wine-box-right">
-            <h1>Right</h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-            possimus doloremque vero modi, praesentium ipsum blanditiis
-            exercitationem vel deleniti, totam corrupti numquam neque quisquam.
-            Iusto itaque aliquid, numquam assumenda, tenetur animi ad
-            voluptatibus, sed neque doloribus voluptas asperiores pariatur sequi
-            nihil maxime obcaecati delectus consectetur cum laborum beatae.
-            Quaerat, reprehenderit.
+  <body>
+    <div id="sidePanel" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+    </div>
+    <div class="wrapper">
+      <nav class="navbar">
+        <a class="navbar-brand mx-auto">Title</a>
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+      </nav>
+
+      <section>
+        <div class="container-fluid">
+          <div class="wine-container">
+            <div class="header-container">
+              <h1 class="header">Hello, world!</h1>
+            </div>
+            <div class="wine-box wine-box-left">
+              <h1>Left</h1>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              sequi fugiat, facere cupiditate fugit ad? Ea, laborum, doloremque
+              sed accusantium odio eum perferendis soluta debitis quos aperiam,
+              fugit dicta a! Quae est accusamus hic reprehenderit excepturi qui.
+              Quasi praesentium officia accusantium fuga, nisi laboriosam facere
+              nesciunt eligendi quas, tenetur corporis.
+            </div>
+            <div class="wine-box wine-box-right">
+              <h1>Right</h1>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              possimus doloremque vero modi, praesentium ipsum blanditiis
+              exercitationem vel deleniti, totam corrupti numquam neque
+              quisquam. Iusto itaque aliquid, numquam assumenda, tenetur animi
+              ad voluptatibus, sed neque doloribus voluptas asperiores pariatur
+              sequi nihil maxime obcaecati delectus consectetur cum laborum
+              beatae. Quaerat, reprehenderit.
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="container-fluid">
-        <figure>
-          <img
-            class="seeing-eye"
-            src="Public/Images/AdobeStock_170700208.jpeg"
-          />
-          <figcaption>The eye sees all</figcaption>
-        </figure>
-      </div>
-    </section>
+      <section>
+        <div class="container-fluid">
+          <figure>
+            <img
+              class="seeing-eye"
+              src="Public/Images/AdobeStock_170700208.jpeg"
+            />
+            <figcaption class="seeing-eye-caption">The eye sees all</figcaption>
+          </figure>
+        </div>
+      </section>
 
-    <footer class="footer">
-      <div class="container">
-        <p class="footer-text">Footer &copy; 2020</p>
-      </div>
-    </footer>
+      <footer class="footer">
+        <div class="container">
+          <p class="footer-text">Footer &copy; 2020</p>
+        </div>
+      </footer>
+    </div>
 
     <!-- Optional JavaScript -->
     <script src="Public/JS/index.js"></script>

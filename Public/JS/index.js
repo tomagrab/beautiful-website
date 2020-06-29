@@ -1,37 +1,68 @@
 //jshint esversion:6
 
-setTimeout(function slideBoxesIn() {
+// Function to decrease the opacity of a DOM object
+function decreaseOpacity(elem, int, rate, limit) {
+  var elOp = Number(window.getComputedStyle(elem).getPropertyValue("opacity"));
+  console.log(elOp);
+  var CO = setInterval(chanOp, int);
+  function chanOp() {
+    if (elOp <= limit) {
+      clearInterval(CO);
+    } else {
+      elem.style.opacity = elOp -= rate;
+    }
+  }
+}
+
+// Function to increase the opacity of a DOM object
+function increaseOpacity(elem, int, rate, limit) {
+  var elOp = Number(window.getComputedStyle(elem).getPropertyValue("opacity"));
+  console.log(elOp);
+  var CO = setInterval(chanOp, int);
+  function chanOp() {
+    if (elOp >= limit) {
+      clearInterval(CO);
+    } else {
+      elem.style.opacity = elOp += rate;
+    }
+  }
+}
+
+// Function to increase the opacity of two DOM objects
+function increaseOpacityTwoObjects(elem1, elem2, int, rate, limit) {
+  var elOp = Number(window.getComputedStyle(elem1).getPropertyValue("opacity"));
+  console.log(elOp);
+  var CO = setInterval(chanOp, int);
+  function chanOp() {
+    if (elOp >= limit) {
+      clearInterval(CO);
+    } else {
+      elem1.style.opacity = elOp += rate;
+      elem2.style.opacity = elOp += rate;
+    }
+  }
+}
+
+setTimeout(function () {
   var wineBoxL = document.querySelector(".wine-box-left");
   var wineBoxR = document.querySelector(".wine-box-right");
-  var opacityL = Number(
-    window.getComputedStyle(wineBoxL).getPropertyValue("opacity")
-  );
-  var opacityR = Number(
-    window.getComputedStyle(wineBoxR).getPropertyValue("opacity")
-  );
-
-  var CO = setInterval(changeOpacity, 10);
-  function changeOpacity() {
-    if (opacityR >= 1 && opacityL >= 1) {
-      clearInterval(CO);
-    } else {
-      wineBoxR.style.opacity = opacityR += 0.025;
-      wineBoxL.style.opacity = opacityL += 0.025;
-    }
-  }
+  increaseOpacityTwoObjects(wineBoxL, wineBoxR, 10, 0.025, 1);
 }, 1000);
 
-setTimeout(function fadeImg() {
+setTimeout(function () {
   var img = document.querySelector(".seeing-eye");
-  var imgOpacity = Number(
-    window.getComputedStyle(img).getPropertyValue("opacity")
-  );
-  var CO = setInterval(changeOpacity, 20);
-  function changeOpacity() {
-    if (imgOpacity >= 1) {
-      clearInterval(CO);
-    } else {
-      img.style.opacity = imgOpacity += 0.025;
-    }
-  }
+  var imgCap = document.querySelector(".seeing-eye-caption");
+  increaseOpacityTwoObjects(img, imgCap, 20, 0.025, 1);
 }, 1000);
+
+function openNav() {
+  document.getElementById("sidePanel").style.width = "250px";
+  var wrapper = document.querySelector(".wrapper");
+  decreaseOpacity(wrapper, 20, 0.025, 0.7);
+}
+
+function closeNav() {
+  document.getElementById("sidePanel").style.width = "0px";
+  var wrapper = document.querySelector(".wrapper");
+  increaseOpacity(wrapper, 20, 0.025, 1);
+}
